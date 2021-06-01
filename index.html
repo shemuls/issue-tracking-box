@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Issue Tracker: </title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+
 
       <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -39,6 +41,16 @@
       .main-content{
         background-color: #0D1117;
         font-family: Poppins;
+      }
+      #myClose{
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        background-color: transparent;
+        border: none;
       }
       
     </style>
@@ -97,6 +109,9 @@
             <div class="col">
               <h4 class="text-center mb-5">Solve your issues make fun!</h4>
               <div class="issues-form bg-dark p-5 rounded-3">
+                <div id="errorMessage">
+                  
+                </div>
                 <form id="issueSumbitForm" class="row g-3">
                   <div class="col-md-6">
                     <label for="issueType" class="form-label">issues Type</label>
@@ -128,49 +143,15 @@
         <div class="container">
           <div id="showAllIssuesHTML" class="row">
 
-            <div class="col-md-6 mb-3">
-              <div class="h-100 bg-dark rounded-3 p-5">
-                <h6 class="text-muted">Issue ID: 29983</h6>
-                <span class="badge badge-warning bg-primary mb-3">Open</span>
-                <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-
-                <p>
-                  <svg class="bi" width="24" height="24"><use xlink:href="#people-circle"/></svg> <span class="text-muted" style="margin-left:10px; margin-right: 20px;">Shemul</span>
-                  <svg class="bi" width="24" height="24"><use xlink:href="#speedometer2"/></svg><span class="text-muted" style="margin-left:10px">Low</span>
-                </p>
-
-                <div class="issue-manage-btn mt-5">
-                  <button class="btn btn-outline-warning btn-sm" type="button">Close</button>
-                  <button class="btn btn-outline-danger btn-sm" type="button">Delete</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <div class="h-100 bg-dark rounded-3 p-5">
-                <h6 class="text-muted">Issue ID: 29983</h6>
-                <span class="badge badge-warning bg-primary mb-3">Open</span>
-                <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-
-                <p>
-                  <svg class="bi" width="24" height="24"><use xlink:href="#people-circle"/></svg> <span class="text-muted" style="margin-left:10px; margin-right: 20px;">Shemul</span>
-                  <svg class="bi" width="24" height="24"><use xlink:href="#speedometer2"/></svg><span class="text-muted" style="margin-left:10px">Low</span>
-                </p>
-
-                <div class="issue-manage-btn mt-5">
-                  <button class="btn btn-outline-warning btn-sm" type="button">Close</button>
-                  <button class="btn btn-outline-danger btn-sm" type="button">Delete</button>
-                </div>
-              </div>
-            </div>
-
+            
           </div>
         </div>
       </section>
     </div>
     
-
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script> 
+    
+    <script src="assets/bootstrap/js/popper.min.js"></script> 
     <script src="assets/js/main.js"></script>
   </body>
 </html>

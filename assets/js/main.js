@@ -21,12 +21,22 @@ function submitIssue(e) {
         showAllIssues();
     } else {
         const errorMessage = 'Name and Description field are required!';
-        console.log(errorMessage);
+        document.getElementById('errorMessage').innerHTML = '<p class="alert alert-danger">All field are required! <button data-dismiss="alert"  id="myClose">&times;</button></p>'
+        closeMyAlert();
     }
     
     document.getElementById('issueSumbitForm').reset();
     e.preventDefault();
 }
+
+
+function closeMyAlert() {
+    document.getElementById('myClose').addEventListener('click', function () {
+        const h = this.parentElement;
+        h.style.display = 'none';
+    });
+}
+
 
 const showAllIssues = () => {
     if (localStorage.getItem('issues')){
@@ -42,7 +52,7 @@ const showAllIssues = () => {
             <div class="col-md-6 mb-3">
               <div class="h-100 bg-dark rounded-3 p-5">
                 <h6 class="text-muted">Issue ID:  ${issue.issueId}</h6>
-                <span class="badge badge-warning bg-primary mb-3">Open</span>
+                <span class="badge badge-warning bg-primary mb-3">${issue.status}</span>
                 <p>${issue.issueDesc}</p>
 
                 <p>
@@ -55,7 +65,7 @@ const showAllIssues = () => {
                 </p>
 
                 <div class="issue-manage-btn mt-5">
-                  <button class="btn btn-outline-warning btn-sm" type="button">Close</button>
+                  <button id="issueCloseBTN" class="btn btn-outline-warning btn-sm" type="button">Close</button>
                   <button class="btn btn-outline-danger btn-sm" type="button">Delete</button>
                 </div>
               </div>
