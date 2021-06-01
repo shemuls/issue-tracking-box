@@ -100,7 +100,7 @@
                 <form id="issueSumbitForm" class="row g-3">
                   <div class="col-md-6">
                     <label for="issueType" class="form-label">issues Type</label>
-                    <select id="issueType" class="form-select">
+                    <select name="issueType" id="issueType" class="form-select">
                       <option>Low</option>
                       <option>Medium</option>
                       <option>High</option>
@@ -108,14 +108,14 @@
                   </div>
                   <div class="col-md-6">
                     <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="userName" name="name">
                   </div>
                   <div class="col-12">
                     <label for="issueDesc" class="form-label">Descriptions</label>
                     <textarea class="form-control" name="issueDesc" id="issueDesc" cols="30" rows="10"></textarea>
                   </div>
                   <div class="col">
-                    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                    <button id="issueSubmitBtn" class="btn btn-primary btn-lg" type="submit">Submit</button>
                   </div>
                 </form>
               </div>
@@ -126,9 +126,9 @@
 
       <section id="issue-box-area" class="issue-box-area">
         <div class="container">
-          <div class="row">
+          <div id="showAllIssuesHTML" class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <div class="h-100 bg-dark rounded-3 p-5">
                 <h6 class="text-muted">Issue ID: 29983</h6>
                 <span class="badge badge-warning bg-primary mb-3">Open</span>
@@ -146,7 +146,7 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <div class="h-100 bg-dark rounded-3 p-5">
                 <h6 class="text-muted">Issue ID: 29983</h6>
                 <span class="badge badge-warning bg-primary mb-3">Open</span>
